@@ -15,12 +15,70 @@
 
   var Hotspots = {
 
+    counter:0,
+    correct_counter:0,
+    interval_id:0,
+
     onSpot: function() {
-      console.log('juiste klik');
+      console.log('juiste klik',Hotspots.correct_counter);
+      Hotspots.correct_counter++;
+
+      if(Hotspots.correct_counter==6){
+         
+        setTimeout(function(){ location.href = 'goed';  }, 1000);
+
+      }
     },
     offSpot: function() {
       console.log('verkeerde klik');
-    } 
+      location.href = 'helaas';
+    } , 
+    initSlideShow: function() {
+      
+
+
+      $('#imagemapper1-wrapper').css('opacity',0);
+      
+      $('.brainwash img:gt(0)').hide();
+
+       Hotspots.interval_id = setInterval(function(){
+         
+         Hotspots.counter++;
+         console.log('counter', Hotspots.interval_id);
+
+         if(Hotspots.counter==5){
+            clearInterval(Hotspots.interval_id);
+            $('.brainwash').remove();
+            $('#imagemapper1-wrapper').css('opacity',1);
+            Hotspots.initGame();
+         }
+
+         $('.brainwash :first-child').fadeOut()
+            .next('img').fadeIn()
+            .end().appendTo('.brainwash');}, 
+          1400);
+
+      
+    } ,
+    initGame: function() {
+
+        $( ".imapper-pin-wrapper" ).click(function(event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+            $(this).css('opacity',1);
+            Hotspots.onSpot();
+           
+        });
+
+        $( ".imagemapper-wrapper" ).click(function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            Hotspots.offSpot();
+        });
+
+    }
+
   };
 
 
@@ -43,6 +101,7 @@
       init: function() {
         // JavaScript to be fired on the home page
         
+        
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
@@ -58,14 +117,7 @@
     'spel': {
       init: function() {
         // JavaScript to be fired on the about us page
-        //alert('sneeuwpop_spel');
-        $( ".imapper-area-pin" ).click(function(event) {
-            Hotspots.onSpot();
-        });
-
-        $( ".imagemapper-wrapper" ).click(function(event) {
-            Hotspots.offSpot();
-        });
+        Hotspots.initSlideShow();
 
       }
     }
@@ -100,6 +152,8 @@
       UTIL.fire('common', 'finalize');
     }
   };
+
+
 
 
   // Load Events

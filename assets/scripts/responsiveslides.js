@@ -230,7 +230,7 @@
 
           startCycle = function () {
             rotate = setInterval(function () {
-
+              
               // Clear the event queue
               $slide.stop(true, true);
 
@@ -258,6 +258,8 @@
             startCycle();
           }
         };
+
+
 
         // Pause on hover
         if (settings.pause) {

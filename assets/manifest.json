@@ -17,9 +17,9 @@
         "scripts/customizer.js"
       ]
     },
-    "responsiveslides.js": {
+    "unslider.js": {
       "files": [
-        "scripts/responsiveslides.js"
+        "scripts/unslider.js"
       ]
     },
     "jquery.js": {
