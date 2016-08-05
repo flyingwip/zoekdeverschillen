@@ -1,4 +1,40 @@
 
+
+@font-face {
+    font-family: 'intro_bold_altregular';
+    src: url('../fonts/intro-bold-alt-webfont.woff2') format('woff2'),
+         url('../fonts/intro-bold-alt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'intro_bookregular';
+    src: url('../fonts/intro-book-webfont.woff2') format('woff2'),
+         url('../fonts/intro-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+body{
+	font-family: 'intro_bookregular' ;
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	//position: fixed;
+}
+
+
+
 .brand{
 	display: none;
 }

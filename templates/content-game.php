@@ -1,12 +1,22 @@
+
+<!-- 
+
+ALL slides are in the slideshiw options
+-->
+
+
+
 <!-- The slideshow -->
 <div class="brainwash">
 
-	<img src="<?php echo get_template_directory_uri(); ?>/temp/New-York-City-5.jpg" alt="">
-	<img src="<?php echo get_template_directory_uri(); ?>/temp/New-York-City-4.jpg" alt="">
-	<img src="<?php echo get_template_directory_uri(); ?>/temp/New-York-City-3.jpg" alt="">
-	<img src="<?php echo get_template_directory_uri(); ?>/temp/New-York-City-2.jpg" alt="">
-	<img src="<?php echo get_template_directory_uri(); ?>/temp/New-York-City-1.jpg" alt="">
+<?php
+$slides =  array_reverse(get_field('afbeeldingen', 'option'));
+$slides = array_reverse($slides[0]);
+foreach ($slides as $key => $slide) {
+	echo '<img src="'. $slide. '" alt="Landau Hotspots game">';
+}
 
+?>
 </div>
 
 
