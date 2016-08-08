@@ -1,3 +1,26 @@
+
+
+input[type=submit], button{
+	font-family: 'intro_bold_altregular' ;
+	border-radius: 7px;
+	background-color: $landau-green;
+	border: 1px solid $landau-green;
+	padding: 10px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+
+input[type=submit] {
+	color: #fff;
+}
+
+
+button a{
+	color: #fff !important;
+	
+}
+
 //button on the start page
 button.start {
 	z-index: 10;

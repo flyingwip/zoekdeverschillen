@@ -43,3 +43,30 @@
 main{
   padding: 0px ;
 }
+
+.page-header{
+	margin-top: 0px;	
+	img{
+		max-width: 100%;
+	}
+
+	h1{
+		display: none;
+	}
+}
+
+.helaas h3{
+	margin-top: 30%;
+}
+
+.helaas button{
+	margin-top: 40%;
+}
+
+body.goed{
+	position: relative;
+}
+
+.goed h3{
+	margin-top: -20px;
+}

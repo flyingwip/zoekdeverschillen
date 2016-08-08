@@ -13,3 +13,53 @@
   @extend .btn;
   @extend .btn-default;
 }
+
+
+.wpcf7-form-control-wrap input{
+	max-width: 90%;
+}
+
+span.wpcf7-form-control-wrap{
+	display: block;
+	//margin-left: 10%;
+}
+
+span.voorwaarden, span.aanbiedingen{
+	display: inline;
+	margin-left: 15px;
+}
+
+input[type=radio] {
+	margin-left: 5px;
+}
+
+
+
+.form_container{
+	background-color: #FFF;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+p.cb_label{
+	text-align: left;
+
+}
+
+#voorwaarden{
+	display: inline-block;;
+	margin-left: 10px;
+}
+
+.checkbox-aanbiedingen{
+	margin-left: 8px;
+
+	.wpcf7-list-item-label{
+		position: relative;
+		margin-left: 31px;
+	    top: -20px;
+	    display: inline-block;
+	}
+}
+
+//special adjustmemt 

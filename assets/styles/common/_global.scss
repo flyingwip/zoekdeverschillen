@@ -9,9 +9,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'intro_bookregular';
     src: url('../fonts/intro-book-webfont.woff2') format('woff2'),
@@ -21,16 +18,29 @@
 
 }
 
+@viewport {  
+   orientation: portrait;  
+ }  
 
-
+$landau-green: #7dba42;
+$landau-blue: #183c86;
 
 
 body{
 	font-family: 'intro_bookregular' ;
+
 	height: 100%;
 	overflow: hidden;
 	width: 100%;
-	//position: fixed;
+	position: fixed;
+	text-align: center;
+	color: $landau-blue;
+
+	background-color: #ccc;
+}
+
+.wrap.container{
+	padding: 0px ;
 }
 
 
@@ -39,8 +49,25 @@ body{
 	display: none;
 }
 
+// .logo{
+// 	display: none;
+// 	position: absolute;
+// 	z-index: 20;
+// 	opacity: .7;
+// 	right:20px;
+// 	height: auto !important;
+// 	background-color: orange;
+
+// 	img{
+// 		max-width: 100% ;	
+// 	}
+	
+// }
+
 .main.main{
 	text-align: center;
+	min-height: 460px;
+	
 }
 
 
@@ -54,4 +81,11 @@ body{
 	left:0; 
 	top:0;
 	max-width: 100%;
+}
+
+.content{
+	max-width: 438px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff;
 }

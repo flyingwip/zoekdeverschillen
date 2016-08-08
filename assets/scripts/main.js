@@ -30,7 +30,8 @@
       }
     },
     offSpot: function() {
-      console.log('verkeerde klik');
+      //console.log('verkeerde klik');
+      $('#imagemapper1-wrapper').css('pointer-events','none');
       location.href = 'helaas';
     } , 
     initSlideShow: function() {
@@ -89,8 +90,11 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        //alert('init');
-        //console.log(  $('.entry-title').text()  );
+        
+        
+
+        
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -108,10 +112,16 @@
       }
     },
     // About us page, note the change from about-us to about_us.
-    'about_us': {
+    'helaas': {
       init: function() {
         // JavaScript to be fired on the about us page
-        alert('about_us');
+        //manipulate browser back button
+        if (window.history && window.history.pushState) {
+          window.history.pushState('forward', null, './#forward');
+          $(window).on('popstate', function() {
+            window.location.href = 'start';
+          });
+        }
       }
     },
     'spel': {

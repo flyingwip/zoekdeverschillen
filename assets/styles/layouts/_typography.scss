@@ -4,6 +4,16 @@ body{
 	font-family: 'intro_bookregular' ;
 }
 
-h1, h2, h3 h4{
+h1, h2, h3, h4, h5{
 	font-family: 'intro_bold_altregular';	
+}
+
+h5{
+	color: $landau-green;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+h3{
+	color: $landau-blue;
 }
