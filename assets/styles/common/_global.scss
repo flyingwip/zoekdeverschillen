@@ -22,8 +22,6 @@
    orientation: portrait;  
  }  
 
-$landau-green: #7dba42;
-$landau-blue: #183c86;
 
 
 body{
@@ -34,9 +32,9 @@ body{
 	width: 100%;
 	position: fixed;
 	text-align: center;
-	color: $landau-blue;
+	color: $landal-blue;
 
-	background-color: #ccc;
+	background-color: #eee;
 }
 
 .wrap.container{
@@ -67,7 +65,7 @@ body{
 .main.main{
 	text-align: center;
 	min-height: 460px;
-	
+
 }
 
 

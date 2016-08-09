@@ -111,6 +111,20 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
+    'goed': {
+      init: function() {
+        // JavaScript to be fired on the about us page
+        var a = $('input[name="aanbiedingen_ontvangen[]"]').val(1);
+        //console.log(a.val()); 
+
+        $(".wpcf7").on('wpcf7:mailsent', function(event){
+          // Your code here
+          location.href = 'bedankt-a';
+        });
+
+      }
+    },
+
     // About us page, note the change from about-us to about_us.
     'helaas': {
       init: function() {
