@@ -15,7 +15,7 @@ global $post;
   	if ( has_post_thumbnail() ) {
 	    //echo get_the_post_thumbnail();
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-		echo '<img src="'. $image[0]. '" alt="Landau Greenparks">';
+		echo '<img src="'. $image[0]. '" alt="Landal Greenparks">';
 	}
   
   ?>

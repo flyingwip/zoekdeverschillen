@@ -19,8 +19,9 @@ foreach ($slides as $key => $slide) {
 ?>
 </div>
 
-
-
-
 <?php the_content(); ?>
+<div class="game_footer">
+Zie jij de verschillen? Tik het aan
+</div>
+
 <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>

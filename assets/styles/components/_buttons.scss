@@ -8,11 +8,19 @@ input[type=submit], button{
 	padding: 10px;
 	padding-left: 12px;
 	padding-right: 12px;
+
+	-moz-box-shadow: 3px 3px 4px #AAA;
+	-webkit-box-shadow: 3px 3px 4px #AAA;
+	box-shadow: 3px 3px 4px #AAA;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#AAA')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#AAA');
 }
 
 
 input[type=submit] {
 	color: #fff;
+
+
 }
 
 
@@ -25,6 +33,7 @@ button a{
 button.start {
 	z-index: 10;
 	position: relative;
-    top: -100px;
+    top: -230px;
+    color: #FFF ;
     
 }

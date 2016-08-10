@@ -78,6 +78,22 @@
             Hotspots.offSpot();
         });
 
+        //is the window higher then image
+        // var pos;    
+        if($(window).height() -  $('#imagemapper1-wrapper').height()>0){
+           pos = 0 - $('.game_footer').height();
+        } else {
+          //pos = window.screen.height -  $('#imagemapper1-wrapper').height() - $('.game_footer').height();
+          pos = document.documentElement.clientHeight -  $('#imagemapper1-wrapper').height() - $('.game_footer').height()-10;
+        }
+
+        $('.game_footer').css('top',pos + 'px');    
+        
+        
+    }, 
+
+    setGameFooter: function() {
+
     }
 
   };
@@ -104,7 +120,17 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        //alert('home');
         
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+      }
+    },
+    'start': {
+      init: function() {
+        // JavaScript to be fired on the home page
+          
         
       },
       finalize: function() {
@@ -116,7 +142,6 @@
         // JavaScript to be fired on the about us page
         var a = $('input[name="aanbiedingen_ontvangen[]"]').val(1);
         //console.log(a.val()); 
-
         $(".wpcf7").on('wpcf7:mailsent', function(event){
           // Your code here
           location.href = 'bedankt-a';
@@ -131,7 +156,7 @@
         // JavaScript to be fired on the about us page
         //manipulate browser back button
         if (window.history && window.history.pushState) {
-          window.history.pushState('forward', null, './#forward');
+          //window.history.pushState('forward', null, './#forward');
           $(window).on('popstate', function() {
             window.location.href = 'start';
           });
@@ -142,6 +167,10 @@
       init: function() {
         // JavaScript to be fired on the about us page
         Hotspots.initSlideShow();
+
+        //what is the height of the imagewrapper?
+
+
 
       }
     }

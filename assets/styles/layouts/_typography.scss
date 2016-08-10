@@ -4,9 +4,11 @@ body{
 	font-family: 'intro_bookregular' ;
 }
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5, strong{
 	font-family: 'intro_bold_altregular';	
 }
+
+
 
 h5{
 	color: $landal-green;

@@ -22,18 +22,16 @@
    orientation: portrait;  
  }  
 
+html,body,.wrap,.content{height:100% !important;}
 
 
 body{
 	font-family: 'intro_bookregular' ;
-
-	height: 100%;
 	overflow: hidden;
 	width: 100%;
 	position: fixed;
 	text-align: center;
 	color: $landal-blue;
-
 	background-color: #eee;
 }
 
@@ -62,10 +60,9 @@ body{
 	
 // }
 
-.main.main{
+main.main{
 	text-align: center;
-	min-height: 460px;
-
+	height: 100%;
 }
 
 
@@ -86,4 +83,10 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #fff;
+
+}
+
+.text_container{
+	padding-left: 5%;
+	padding-right: 5%;
 }

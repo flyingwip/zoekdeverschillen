@@ -42,6 +42,13 @@
 
 main{
   padding: 0px ;
+  //background-color: pink;
+}
+
+//some pages have diffrent text_container paddings
+.start .text_container, .goed .text_container {
+	padding-left: 0%;
+	padding-right: 0%;
 }
 
 .page-header{
@@ -56,11 +63,11 @@ main{
 }
 
 .helaas h3{
-	margin-top: 30%;
+	//margin-top: 30%;
 }
 
 .helaas button{
-	margin-top: 40%;
+	//margin-top: 40%;
 }
 
 body.goed{
