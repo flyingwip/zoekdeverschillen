@@ -37,9 +37,8 @@
     initSlideShow: function() {
       
 
-
       $('#imagemapper1-wrapper').css('opacity',0);
-      
+        
       $('.brainwash img:gt(0)').hide();
 
        Hotspots.interval_id = setInterval(function(){
@@ -106,21 +105,47 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        
-        
+
+        //console.log( document.documentElement.clientHeight );
 
         
-
+        //console.log(  );
+        
       },
       finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
+        // // JavaScript to be fired on all pages, after page specific JS is fired
+        // //offset = $('.start').offset()
+        // //var posY = offset.top - $(window).scrollTop();
+        // //console.log('scrollTop' ,$(window).scrollTop() );
+        // //$(".green_bottom").css({ top: '600px' });
+        // //$(".green_bottom").css({ left: '50%' }) ;
+        // //alert(screen.width);
+        
+        
+        // //var p =  50 - (120 / $(".main").width() *100)*.5;
+        // //alert ( $(".green_bottom").width() );
+        // //console.log( $(".green_bottom").css("padding-left") );
+        // //var theDiv = $(".green_bottom");
+        // //var totalWidth = theDiv.width();
+        // //totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
+        
+        // // console.log('totalwidth', totalWidth);
+        // // totalWidth += parseInt(theDiv.css("margin-left"), 10) + parseInt(theDiv.css("margin-right"), 10); //Total Margin Width
+        // // console.log('totalwidth', totalWidth);
+        // //totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
+        // //alert( totalWidth);
+
+        // //var p =  50 - (totalWidth / $(".main").width() *100)*.5;
+        // //$(".green_bottom").css({ left: p+'%' }) ;
+        // $(".green_bottom").css( "margin-left", "auto" );
+        // $(".green_bottom").css( "margin-right", "auto" );
       }
     },
     // Home page
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
-        //alert('home');
+        
         
       },
       finalize: function() {
@@ -130,6 +155,21 @@
     'start': {
       init: function() {
         // JavaScript to be fired on the home page
+
+        //set the start button on the right position
+        
+        
+        //console.log( pos );
+        if($(window).height() -  $('.text_container').height()>0){
+           pos = 0 - $('button.green').height()-60;
+        } else {
+          //pos = window.screen.height -  $('#imagemapper1-wrapper').height() - $('.game_footer').height();
+          pos = document.documentElement.clientHeight -  $('.text_container').height() - $('button.green').height()-10;
+        }
+
+        $('button.green').css('top',pos + 'px');    
+
+
           
         
       },
@@ -139,15 +179,47 @@
     },
     'goed': {
       init: function() {
-        // JavaScript to be fired on the about us page
-        var a = $('input[name="aanbiedingen_ontvangen[]"]').val(1);
-        //console.log(a.val()); 
+        // JavaScript to be fired on the page
+        
+        //display none to demo_mode:on
+        $( "p:contains('[demo_mode: on]')" ).css( "display", "none" );
+
+        //zet landen radio default op domein
+        //what is de extensie?
+        var extension=location.hostname.split(".");
+        extension=extension[extension.length-1];
+        if (extension=="nl") {
+          $('input[name="land"][value="België"]').prop('checked', false);
+          $('input[name="land"][value="Nederland"]').prop('checked', true);
+        } else {
+          $('input[name="land"][value="België"]').prop('checked', true);
+          $('input[name="land"][value="Nederland"]').prop('checked', false);
+        }
+
+        //set the nieuwsbrief op checked
+        $('input[name="aanbiedingen_ontvangen[]"]').prop('checked', true);
+
+
+        //callback for redirecting naar juiste bedankt pagina
         $(".wpcf7").on('wpcf7:mailsent', function(event){
-          // Your code here
-          location.href = 'bedankt-a';
+          //is aanbiedingen ontvangen gecheckt?
+          if($('input[name="aanbiedingen_ontvangen[]"]').is(":checked")){
+             location.href = 'bedankt-b';  
+           } else {
+             location.href = 'bedankt-a';
+          }
         });
 
+
+        //prettycheckboxes
+        
+
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+        //$('input[type=checkbox],input[type=radio]').prettyCheckboxes();
       }
+
     },
 
     // About us page, note the change from about-us to about_us.
@@ -156,7 +228,7 @@
         // JavaScript to be fired on the about us page
         //manipulate browser back button
         if (window.history && window.history.pushState) {
-          //window.history.pushState('forward', null, './#forward');
+          window.history.pushState('start', null, '.start');
           $(window).on('popstate', function() {
             window.location.href = 'start';
           });

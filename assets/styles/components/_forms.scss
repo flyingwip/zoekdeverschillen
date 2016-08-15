@@ -20,9 +20,29 @@
 // 	margin-left: 15px;
 // }
 
+//[contact-form-7 id="63" title="Contact form 1"]
+
 input[type=radio] {
 	margin-left: 5px;
 }
+
+input[type="radio"]{
+	display: none;
+}
+
+input[type="radio"] + span.wpcf7-list-item-label {
+ 	//display: none;
+ 	//background-color: green;
+ 	background:url(../images/off.png);
+ 	padding-left: 20px;
+}
+
+input[type="radio"]:checked + span.wpcf7-list-item-label {
+ 	//display: none;
+ 	//background-color: green;
+ 	//background:url(../images/off.png);
+}
+
 
 
 input[type=text], input[type=email]  {
@@ -59,7 +79,8 @@ input[type=text], input[type=email]  {
 }
 
 .wpcf7-form p{
-	text-align: left;	
+	text-align: left;
+	margin-bottom: 5px;	
 }
 
 p.submit{
@@ -68,6 +89,8 @@ p.submit{
 
 span.wpcf7-form-control-wrap{
 	margin-bottom: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 span.voornaam{
@@ -77,15 +100,23 @@ span.voornaam{
 	margin-right: -4px;
 }
 
-span.tussenv{
+span.tussenvoegsel{
 	float: left;
 	width: 35%;
 }
 
 span.wpcf7-form-control-wrap.voornaam, span.wpcf7-form-control-wrap.achternaam, span.wpcf7-form-control-wrap.email{
-	margin-left: 13px;
+	//margin-left: 13px;
 }
 
+span.wpcf7-list-item-label {
+    margin-right: 5px;
+}
+
+
+span.wpcf7-list-item, input[type=radio]  {
+     margin-left: 0; 
+}
 
 .voorwaarden{
 	margin-left: 15px;
@@ -97,11 +128,11 @@ span.wpcf7-form-control-wrap.voornaam, span.wpcf7-form-control-wrap.achternaam, 
 
 
 .aanbiedingen_ontvangen{
-	margin-left: 8px;
-
+	margin-left: 0px;
+	
 	.wpcf7-list-item-label{
 		position: relative;
-		margin-left: 35px;
+		margin-left: 21px;
 	    top: -20px;
 	    display: inline-block;
 	}

@@ -52,14 +52,39 @@ main{
 }
 
 .page-header{
-	margin-top: 0px;	
+	margin-top: 0px;
+
 	img{
 		max-width: 100%;
 	}
 
+	.click_logo{
+		position: absolute;
+		z-index: 200;
+		width: 60px;
+		height: 60px;
+		right: 4%;
+
+		/* Portrait and Landscape */
+		@media only screen 
+		  and (max-device-width: 667px) 
+		  and (-webkit-min-device-pixel-ratio: 2) { 
+		  	width: 45px;
+			height: 45px;
+
+		}
+
+	}
 	h1{
 		display: none;
 	}
+}
+
+h5{
+	margin-left: 10px;
+	margin-right: 10px;
+
+	
 }
 
 .helaas h3{
@@ -75,5 +100,15 @@ body.goed{
 }
 
 .goed h3{
-	margin-top: -20px;
+	//margin-top: -40px;
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 568px)
+	  and (orientation: portrait) {
+	  	//adjust the margin for iphone 5
+		margin-top: -40px;
+		
+	}
 }

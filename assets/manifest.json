@@ -17,11 +17,6 @@
         "scripts/customizer.js"
       ]
     },
-    "unslider.js": {
-      "files": [
-        "scripts/unslider.js"
-      ]
-    },
     "jquery.js": {
       "bower": ["jquery"]
     }
