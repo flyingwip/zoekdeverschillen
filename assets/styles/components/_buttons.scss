@@ -2,13 +2,11 @@
 
 input[type=submit], button{
 	font-family: 'intro_bold_altregular' ;
-	border-radius: 7px;
+	font-size: 16px;
+	border-radius: 4px;
 	background-color: $landal-green;
 	border: 1px solid $landal-green;
-	padding: 10px;
-	padding-left: 12px;
-	padding-right: 12px;
-
+	padding: 5px;
 	-moz-box-shadow: 3px 3px 4px #AAA;
 	-webkit-box-shadow: 3px 3px 4px #AAA;
 	box-shadow: 3px 3px 4px #AAA;
@@ -19,9 +17,8 @@ input[type=submit], button{
 
 input[type=submit] {
 	color: #fff;
-
-
 }
+
 
 
 button a{
@@ -29,13 +26,53 @@ button a{
 	
 }
 
+.wpcf7-submit{
+	position: absolute;
+}
+
 //button on the start page
 button.green {
-	z-index: 10;
-	position: relative;
+	z-index: 100;
+	position: absolute;
     //top: -230px;
     color: #FFF ;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     
+}
+
+
+.social_media{
+
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+
+   h3{
+	  position: relative;
+	  //top: 18px;
+	  //left: 0px; 	
+   }	 	
+
+  img {
+  	margin-top: 10px;
+  	position: relative;
+  	float: right;
+  	width: 40px;
+  	height: 40px;
+  	margin-left: 5px;
+  	margin-right: 5px;
+
+
+  }
+
+  img.twitter{
+  	position: relative;
+  	top: 19px;		
+  }
+  
+}
+
+.social_media h3 {
+  
 }

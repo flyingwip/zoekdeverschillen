@@ -26,22 +26,45 @@ input[type=radio] {
 	margin-left: 5px;
 }
 
-input[type="radio"]{
+input[type="radio"], input[type="checkbox"]{
 	display: none;
 }
 
 input[type="radio"] + span.wpcf7-list-item-label {
- 	//display: none;
- 	//background-color: green;
- 	background:url(../images/off.png);
+ 	background:url(../images/radio.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 17px 17px;
  	padding-left: 20px;
-}
+ }
+
+ input[type="checkbox"] + span.wpcf7-list-item-label, input[type="checkbox"] + .acceptance {
+ 	background:url(../images/check.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 17px 20px;
+ 	padding-left: 22px;
+ }
+
+ input[type="checkbox"] + .acceptance {
+ 	padding-top: 2px;
+ 	padding-bottom: 3px;
+ }
 
 input[type="radio"]:checked + span.wpcf7-list-item-label {
  	//display: none;
  	//background-color: green;
- 	//background:url(../images/off.png);
+	background:url(../images/radio_select.jpg);
+	background-repeat: no-repeat;
+ 	background-size: 17px 17px;
+ 	padding-left: 20px;
 }
+
+input[type="checkbox"]:checked + span.wpcf7-list-item-label, input[type="checkbox"]:checked + .acceptance {
+ 	background:url(../images/check_select.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 17px 20px;
+ 	padding-left: 22px;
+ }
+
 
 
 
@@ -50,7 +73,7 @@ input[type=text], input[type=email]  {
 	background-color: $landal-green;
 	border:none;
 	border-radius: 0px;
-	max-width: 90%;
+	max-width: 100%;
 	padding-left: 3%;
 }
 
@@ -72,7 +95,7 @@ input[type=text], input[type=email]  {
 
 
 .form_container{
-	background-color: #fff;
+	//background-color: pink;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
@@ -80,7 +103,9 @@ input[type=text], input[type=email]  {
 
 .wpcf7-form p{
 	text-align: left;
-	margin-bottom: 5px;	
+	position: relative;
+	//margin-bottom: 5px;	
+	//background-color: pink;
 }
 
 p.submit{
@@ -95,9 +120,9 @@ span.wpcf7-form-control-wrap{
 
 span.voornaam{
 	float:left;
-	width: 60%;
+	width: 63%;
 	//margin-left: 46px;
-	margin-right: -4px;
+	margin-right: 2%;
 }
 
 span.tussenvoegsel{
@@ -118,12 +143,16 @@ span.wpcf7-list-item, input[type=radio]  {
      margin-left: 0; 
 }
 
-.voorwaarden{
-	margin-left: 15px;
+// .voorwaarden{
+// 	margin-left: 15px;
 
-	input{
-		margin-right: 5px;
-	}
+// 	input{
+// 		margin-right: 5px;
+// 	}
+// }
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required{
+	width: 100%;
 }
 
 
@@ -132,10 +161,39 @@ span.wpcf7-list-item, input[type=radio]  {
 	
 	.wpcf7-list-item-label{
 		position: relative;
-		margin-left: 21px;
-	    top: -20px;
+		top: -20px;
 	    display: inline-block;
 	}
+}
+
+p.second {
+	top: -8px;
+}
+
+p.third {
+	top:-4px;
+}
+
+p.fourth {
+    top: -7px;
+}
+
+p.fifth{
+	top:-17px;
+}
+
+p.sixth{
+	top:-16px;
+}
+
+p.seventh{
+	top:-18px;
+}
+
+p.eighth{
+	//top:-35px;
+	position: absolute;;
+	text-align: center;	
 }
 
 //special adjustmemt 

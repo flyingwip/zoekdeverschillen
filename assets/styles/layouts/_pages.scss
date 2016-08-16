@@ -64,6 +64,7 @@ main{
 		width: 60px;
 		height: 60px;
 		right: 4%;
+		
 
 		/* Portrait and Landscape */
 		@media only screen 
@@ -95,9 +96,9 @@ h5{
 	//margin-top: 40%;
 }
 
-body.goed{
-	position: relative;
-}
+// body.goed{
+// 	position: relative;
+// }
 
 .goed h3{
 	//margin-top: -40px;
@@ -108,7 +109,20 @@ body.goed{
 	  and (max-device-width: 568px)
 	  and (orientation: portrait) {
 	  	//adjust the margin for iphone 5
-		margin-top: -40px;
+		margin-top: -30px;
 		
 	}
+}
+
+.helaas .text_container:nth-child(2), .bedankt-a .text_container, .bedankt-b .text_container{
+	padding-top: 30%;
+}
+
+.home .text_container {
+	margin-top: -15px;
+}
+
+.start .text_container, .spel .main {
+	position: relative;
+	top:-30px;
 }

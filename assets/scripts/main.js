@@ -107,9 +107,22 @@
         // JavaScript to be fired on all pages
 
         //console.log( document.documentElement.clientHeight );
+        pos = document.documentElement.clientHeight -   $('button.green').height()-35;
+        $('button.green').css('top',pos + 'px');
 
+        //what is width of button?
         
-        //console.log(  );
+        var theDiv = $("button.green");
+        var totalWidth = theDiv.outerWidth();
+        
+        totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
+        totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
+        //console.log( totalWidth );
+
+        var temp = Math.round(  (totalWidth/$(".text_container").width()*100)*.5  );
+        //console.log( temp );
+        $('button.green').css('left',50-temp+4 + '%');
+        
         
       },
       finalize: function() {
@@ -144,8 +157,13 @@
     // Home page
     'home': {
       init: function() {
-        // JavaScript to be fired on the home page
-        
+        // // JavaScript to be fired on the home page
+        // if($(window).height() -  $('main').height()>0){
+        //    pos = 0 - $('button.green').height()-60;
+        // } else {
+        //   //pos = window.screen.height -  $('#imagemapper1-wrapper').height() - $('.game_footer').height();
+        //   pos = document.documentElement.clientHeight -   $('button.green').height()-10;
+        // }
         
       },
       finalize: function() {
@@ -157,24 +175,29 @@
         // JavaScript to be fired on the home page
 
         //set the start button on the right position
-        
-        
-        //console.log( pos );
-        if($(window).height() -  $('.text_container').height()>0){
-           pos = 0 - $('button.green').height()-60;
-        } else {
-          //pos = window.screen.height -  $('#imagemapper1-wrapper').height() - $('.game_footer').height();
-          pos = document.documentElement.clientHeight -  $('.text_container').height() - $('button.green').height()-10;
-        }
+        // if($(window).height() -  $('.text_container').height()>0){
+        //    pos = 0 - $('button.green').height()-60;
+        // } else {
+        //   //pos = window.screen.height -  $('#imagemapper1-wrapper').height() - $('.game_footer').height();
+        //   pos = document.documentElement.clientHeight -  $('.text_container').height() - $('button.green').height()-10;
+        // }
 
-        $('button.green').css('top',pos + 'px');    
+        // $('button.green').css('top',pos + 'px');    
 
-
-          
-        
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        var theDiv = $("button.green");
+        var totalWidth = theDiv.outerWidth();
+        
+        totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
+        totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
+        //console.log( totalWidth );
+
+        var temp = Math.round(  (totalWidth/$(".text_container").width()*100)*.5  );
+        //console.log( temp );
+        $('button.green').css('left',51-temp + '%');
+
       }
     },
     'goed': {
@@ -210,8 +233,29 @@
           }
         });
 
+        //migrate this element
+        $('span.acceptance').appendTo('span.voorwaarden');
 
-        //prettycheckboxes
+
+        pos = $('main').height() -   $('.wpcf7-submit').height()-40;
+        
+        $('.eighth').css('top',pos + 'px');
+
+        
+
+        var theDiv = $(".wpcf7-submit");
+        var totalWidth = theDiv.outerWidth();
+        console.log( totalWidth );
+        totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
+        totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
+        console.log( totalWidth );
+
+        var temp = Math.round(  (totalWidth/$(".text_container").width()*100)*.5  );
+        console.log('yoyo',  temp );
+        $('.eighth').css('left',50-temp + '%');
+
+        
+
         
 
       },

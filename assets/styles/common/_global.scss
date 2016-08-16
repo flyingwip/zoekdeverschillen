@@ -22,7 +22,10 @@
    orientation: portrait;  
  }  
 
-html,body,.wrap,.content{height:100% !important;}
+html,body,.wrap,.content{
+	height:100% !important;
+	max-height: 100%;
+}
 
 
 body{

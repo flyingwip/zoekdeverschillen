@@ -9,7 +9,7 @@ global $post;
   <!-- clickable logo -->
   <a href="<?= esc_url(home_url('/')); ?>"><div class="click_logo"></div></a>
 
-  
+
   <?php
   	if ( has_post_thumbnail() ) {
 	    //echo get_the_post_thumbnail();
