@@ -79,7 +79,20 @@ main{
 	h1{
 		display: none;
 	}
+
+
 }
+
+body.actievoorwaarden, body.goed {
+
+	height:auto;
+	max-height: auto;
+	overflow: scroll;
+	position: relative;
+	
+
+}
+
 
 h5{
 	margin-left: 10px;
@@ -110,7 +123,6 @@ h5{
 	  and (orientation: portrait) {
 	  	//adjust the margin for iphone 5
 		margin-top: -30px;
-		
 	}
 }
 

@@ -111,3 +111,21 @@ function assets() {
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
+function wallpaper(){
+
+  //global $post;
+
+  $field = get_field('wallpaper', 'option');
+
+  if($field){
+    echo 'style="background-image: url('. $field .')"';  
+  } 
+  
+  return;
+  
+
+  
+}
+
+add_filter('wallpaper', __NAMESPACE__ . '\\wallpaper');
+

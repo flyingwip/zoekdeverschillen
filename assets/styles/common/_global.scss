@@ -35,7 +35,9 @@ body{
 	position: fixed;
 	text-align: center;
 	color: $landal-blue;
-	background-color: #eee;
+	
+	//background-image: url(../images/wallppaper.png);
+    
 }
 
 
@@ -67,6 +69,22 @@ body{
 main.main{
 	text-align: center;
 	height: 100%;
+	border-left:10px solid $landal-green;
+	border-right:10px solid $landal-green;
+	border-bottom:10px solid $landal-green;
+	background-color: #FFF;
+
+	@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 568px)
+	  and (orientation: portrait) {
+	  	border-left:0px ;
+		border-right:0px;
+		border-bottom:0px;
+
+  	}
+
+
 }
 
 .brainwash {
@@ -85,11 +103,15 @@ main.main{
 	max-width: 438px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #fff;
+	//background-color: #fff;
 
 }
 
 .text_container{
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+.game_footer{
+	display: none;
 }

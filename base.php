@@ -3,12 +3,13 @@
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 
+
 ?>
 
 <!doctype html>
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
-  <body <?php body_class(); ?>>
+  <body <?php body_class(); Roots\Sage\Setup\wallpaper(); ?>  >
 
     <!--[if IE]>
       <div class="alert alert-warning">
