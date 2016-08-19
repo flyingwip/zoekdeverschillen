@@ -102,26 +102,21 @@
         // JavaScript to be fired on all pages
 
         //console.log( document.documentElement.clientHeight );
-        pos = document.documentElement.clientHeight -   $('button.green').height()-35;
-        $('button.green').css('top',pos + 'px');
-
-        //what is width of button?
+        pos = document.documentElement.clientHeight -   $('button').height()-45;
         
-        var theDiv = $("button.green");
+        $('button').css('top',pos + 'px');
+
+        var theDiv = $("button");
         var totalWidth = theDiv.outerWidth();
         
         totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
         totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
-        //console.log( totalWidth );
-
         var temp = Math.round(  (totalWidth/$(".text_container").width()*100)*0.5  );
-        //console.log( temp );
-        $('button.green').css('left',50-temp+2 + '%');
+        
+        $('button').css('left',50-temp+2 + '%');
 
         
 
-        
-        
       },
       finalize: function() {
         // // JavaScript to be fired on all pages, after page specific JS is fired
@@ -154,6 +149,20 @@
 
       },
       finalize: function() {
+
+
+        pos = document.documentElement.clientHeight -   $('button').height()-50;
+        $('button').css('top',pos + 'px');
+
+
+        if($(window).height() -  $('.text_container').height()>0){
+           pos = 0 - $('.game_footer').height() -130;
+        } else {
+          pos = document.documentElement.clientHeight -  $('.text_container').height() - $('.game_footer').height()-20;
+        }
+        $('.game_footer').css('top',pos + 'px');    
+        $('.game_footer').css('display','block');    
+
         // JavaScript to be fired on the home page, after the init JS
         var theDiv = $("button.green");
         var totalWidth = theDiv.outerWidth();
@@ -260,10 +269,16 @@
         //what is the height of the imagewrapper?
         var h = $("#imagemapper1-wrapper").height() + $(".game_footer").height();
         $("main.main").height( h  +'px' );
-
-
-
       }
+    },
+    'actievoorwaarden': {
+      finalize: function() {
+          
+          var th = $(".text_container").height() + $(".text_container").position().top +120 ;
+          
+          console.log('actievoorwaarden finalize', th); 
+          $("main.main").height( th  +'px' );   
+      } 
     }
   };
 

@@ -31,14 +31,14 @@ input[type="radio"], input[type="checkbox"]{
 }
 
 input[type="radio"] + span.wpcf7-list-item-label {
- 	background:url(../images/radio.jpg);
+ 	background:url(../images/radio.png);
  	background-repeat: no-repeat;
  	background-size: 17px 17px;
  	padding-left: 20px;
  }
 
  input[type="checkbox"] + span.wpcf7-list-item-label, input[type="checkbox"] + .acceptance {
- 	background:url(../images/check.jpg);
+ 	background:url(../images/check.png);
  	background-repeat: no-repeat;
  	background-size: 17px 20px;
  	padding-left: 22px;
@@ -52,14 +52,14 @@ input[type="radio"] + span.wpcf7-list-item-label {
 input[type="radio"]:checked + span.wpcf7-list-item-label {
  	//display: none;
  	//background-color: green;
-	background:url(../images/radio_select.jpg);
+	background:url(../images/radio_select.png);
 	background-repeat: no-repeat;
  	background-size: 17px 17px;
  	padding-left: 20px;
 }
 
 input[type="checkbox"]:checked + span.wpcf7-list-item-label, input[type="checkbox"]:checked + .acceptance {
- 	background:url(../images/check_select.jpg);
+ 	background:url(../images/check_select.png);
  	background-repeat: no-repeat;
  	background-size: 17px 20px;
  	padding-left: 22px;

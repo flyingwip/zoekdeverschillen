@@ -1,10 +1,15 @@
 
 
 .game_footer{
+	display: none;
+}
+
+.game_footer{
 	background-color: $landal_green;
 	color: #FFF;
 	font-size: 18px;
 	position: relative;
 	padding: 2%;
+	font-weight: bold;
 	//height: 70px;
 }

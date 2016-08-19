@@ -35,6 +35,9 @@ body{
 	position: fixed;
 	text-align: center;
 	color: $landal-blue;
+
+	line-height: 120%;
+	font-size: 15px;
 	
 	//background-image: url(../images/wallppaper.png);
     
@@ -100,9 +103,18 @@ main.main{
 }
 
 .content{
-	max-width: 438px;
+	//max-width: 438px;
+	//max-width: 700px;
+	max-width: 70%;
 	margin-left: auto;
 	margin-right: auto;
+
+	@media only screen 
+	and (max-device-width : 736px) 
+	and (orientation : portrait) { 
+		/* STYLES GO HERE */ 
+		max-width: 100%;
+	}
 	//background-color: #fff;
 
 }
@@ -112,6 +124,3 @@ main.main{
 	padding-right: 5%;
 }
 
-.game_footer{
-	display: none;
-}

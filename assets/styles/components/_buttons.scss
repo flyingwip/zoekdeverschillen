@@ -7,11 +7,12 @@ input[type=submit], button{
 	background-color: $landal-green;
 	border: 1px solid $landal-green;
 	padding: 5px;
-	-moz-box-shadow: 3px 3px 4px #AAA;
-	-webkit-box-shadow: 3px 3px 4px #AAA;
-	box-shadow: 3px 3px 4px #AAA;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#AAA')";
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#AAA');
+	padding-left: 9px;
+	padding-right: 9px;
+	-moz-box-shadow: 2px 2px 3px #ccc;
+	box-shadow: 2px 2px 3px #ccc;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#ccc')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#ccc');
 }
 
 
@@ -41,6 +42,22 @@ button.green {
     
 }
 
+button.white {
+	z-index: 100;
+	position: absolute;
+	background-color: #FFF;
+	border-color: $landal-blue;
+	-moz-box-shadow: 0px 0px 0px #ccc;
+	box-shadow: 0px 0px 0px #ccc;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=0, Color='#ccc')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=0, Color='#ccc');
+
+	a{
+		color: $landal-blue !important;
+	}
+
+
+}
 
 ul.social_media{
 
