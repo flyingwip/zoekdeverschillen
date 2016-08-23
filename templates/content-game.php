@@ -11,6 +11,9 @@ ALL slides are in the slideshiw options
 
 <?php
 $slides =  array_reverse(get_field('afbeeldingen', 'option'));
+// echo '<pre>';
+// print_r($slides);
+// echo '</pre>';
 $slides = array_reverse($slides[0]);
 foreach ($slides as $key => $slide) {
 	echo '<img src="'. $slide. '" alt="Landau Greenparks Hotspots game">';

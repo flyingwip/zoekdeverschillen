@@ -43,7 +43,7 @@
 
        Hotspots.interval_id = setInterval(function(){
          Hotspots.counter++;
-         if(Hotspots.counter==5){
+         if(Hotspots.counter==6){
             clearInterval(Hotspots.interval_id);
             $('.brainwash').remove();
             $('#imagemapper1-wrapper').css('opacity',1);
@@ -71,15 +71,8 @@
             Hotspots.offSpot();
         });
 
-        //is the window higher then image
-        // var pos;    
-        if($(window).height() -  $('#imagemapper1-wrapper').height()>0){
-           pos = 0 - $('.game_footer').height() -12;
-        } else {
-          //pos = window.screen.height -  $('#imagemapper1-wrapper').height() - $('.game_footer').height();
-          pos = document.documentElement.clientHeight -  $('#imagemapper1-wrapper').height() - $('.game_footer').height()-10;
-        }
 
+        pos = document.documentElement.clientHeight  - $('.game_footer').height()+8;
         $('.game_footer').css('top',pos + 'px');    
         $('.game_footer').css('display','block');    
         
@@ -102,15 +95,18 @@
         // JavaScript to be fired on all pages
 
         //console.log( document.documentElement.clientHeight );
-        pos = document.documentElement.clientHeight -   $('button').height()-45;
+        pos = document.documentElement.clientHeight -   $('button').height()-50;
         
         $('button').css('top',pos + 'px');
 
+        //what is width of button?
         var theDiv = $("button");
         var totalWidth = theDiv.outerWidth();
         
         totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
         totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
+        //console.log( totalWidth );
+
         var temp = Math.round(  (totalWidth/$(".text_container").width()*100)*0.5  );
         
         $('button').css('left',50-temp+2 + '%');
@@ -126,13 +122,7 @@
     // Home page
     'home': {
       init: function() {
-        // // JavaScript to be fired on the home page
-        // if($(window).height() -  $('main').height()>0){
-        //    pos = 0 - $('button.green').height()-60;
-        // } else {
-        //   //pos = window.screen.height -  $('#imagemapper1-wrapper').height() - $('.game_footer').height();
-        //   pos = document.documentElement.clientHeight -   $('button.green').height()-10;
-        // }
+        
         
       },
       finalize: function() {
@@ -144,9 +134,6 @@
         // JavaScript to be fired on the home page
 
         //set the start button on the right position
-        
-
-
       },
       finalize: function() {
 
@@ -155,11 +142,7 @@
         $('button').css('top',pos + 'px');
 
 
-        if($(window).height() -  $('.text_container').height()>0){
-           pos = 0 - $('.game_footer').height() -130;
-        } else {
-          pos = document.documentElement.clientHeight -  $('.text_container').height() - $('.game_footer').height()-20;
-        }
+        pos = document.documentElement.clientHeight  - $('.game_footer').height()-12;
         $('.game_footer').css('top',pos + 'px');    
         $('.game_footer').css('display','block');    
 
@@ -175,20 +158,10 @@
         //console.log( temp );
         $('button.green').css('left',51-temp + '%');
 
-        var hoogte = $(".text_container").height();
-        
-        //var temp = $('button.green').height();
-        //$('button.green').css('top',pos + 'px');
-        $("main.main").height( hoogte  +'px' );  
-
-
-
       }
     },
     'goed': {
       init: function() {
-        // JavaScript to be fired on the page
-        
         //display none to demo_mode:on
         $( "p:contains('[demo_mode: on]')" ).css( "display", "none" );
 
@@ -220,13 +193,8 @@
 
         //migrate this element
         $('span.acceptance').appendTo('span.voorwaarden');
-
-
-        pos = $('main').height() -   $('.wpcf7-submit').height()-40;
-        
+        pos = document.documentElement.clientHeight  - $('.wpcf7-submit').height()-40;
         $('.eighth').css('top',pos + 'px');
-
-        
 
         var theDiv = $(".wpcf7-submit");
         var totalWidth = theDiv.outerWidth();
@@ -247,8 +215,6 @@
       }
 
     },
-
-    // About us page, note the change from about-us to about_us.
     'helaas': {
       init: function() {
         // JavaScript to be fired on the about us page
@@ -265,20 +231,37 @@
       init: function() {
         // JavaScript to be fired on the about us page
         Hotspots.initSlideShow();
-
         //what is the height of the imagewrapper?
-        var h = $("#imagemapper1-wrapper").height() + $(".game_footer").height();
+        var h = $("#imagemapper1-wrapper").height() + $(".game_footer").height() +7;
         $("main.main").height( h  +'px' );
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+        //$('input[type=checkbox],input[type=radio]').prettyCheckboxes();
       }
     },
     'actievoorwaarden': {
       finalize: function() {
-          
           var th = $(".text_container").height() + $(".text_container").position().top +120 ;
-          
-          console.log('actievoorwaarden finalize', th); 
+          //console.log('actievoorwaarden finalize', th); 
           $("main.main").height( th  +'px' );   
       } 
+    },
+    'bedankt_a': {
+      finalize: function() {
+        pos = document.documentElement.clientHeight  - $('ul.social_media').height()-30;
+        $('ul.social_media').css('top',pos + 'px');    
+        //$('.game_footer').css('display','block');    
+        //console.log(pos);
+      }
+    },
+    'bedankt_b': {
+      finalize: function() {
+        pos = document.documentElement.clientHeight  - $('ul.social_media').height()-30;
+        $('ul.social_media').css('top',pos + 'px');    
+        //$('.game_footer').css('display','block');    
+        //console.log(pos);
+      }
     }
   };
 

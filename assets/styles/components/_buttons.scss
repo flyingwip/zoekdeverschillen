@@ -61,8 +61,13 @@ button.white {
 
 ul.social_media{
 
+	position: absolute;
 	list-style: none;
-	
+	padding-left: 0px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 83%;
 
 	li{	
 		margin-left: 5px;
