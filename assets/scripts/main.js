@@ -74,7 +74,7 @@
 
         var fb = Hotspots.inIosFacebookApp();
         if(fb){
-          cor = 112;
+          cor = 110;
         } 
         //pos = document.documentElement.clientHeight  - ($('.game_footer').height()*2)   -cor ;
         pos = document.documentElement.clientHeight  - $('.game_footer').height()+8 -cor;
@@ -178,7 +178,7 @@
 
         var fb = Hotspots.inIosFacebookApp();
         if(fb){
-          cor = 112;
+          cor = 110;
         } 
         pos = document.documentElement.clientHeight  - ($('.game_footer').height()*2)   -cor ;
 
