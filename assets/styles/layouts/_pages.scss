@@ -2,43 +2,7 @@
 
 
 
-// .page-template-template-game .brand{
-// 	display:none;
 
-// }
-
-
-// .rslides {
-//   position: relative;
-//   list-style: none;
-//   overflow: hidden;
-//   width: 100%;
-//   padding: 0;
-//   margin: 0;
-//   }
-
-// .rslides li {
-//   -webkit-backface-visibility: hidden;
-//   position: absolute;
-//   display: none;
-//   width: 100%;
-//   left: 0;
-//   top: 0;
-//   }
-
-// .rslides li:first-child {
-//   position: relative;
-//   display: block;
-//   float: left;
-//   }
-
-// .rslides img {
-//   display: block;
-//   height: auto;
-//   float: left;
-//   width: 100%;
-//   border: 0;
-//   }
 
 main{
   padding: 0px ;
@@ -51,10 +15,6 @@ main{
 	padding-right: 0%;
 }
 
-.goed .text_container {
-	padding-left: 1%;
-	padding-right: 1%;
-}
 
 .page-header{
 	margin-top: 0px;
@@ -88,7 +48,7 @@ main{
 
 }
 
-body.actievoorwaarden, body.goed {
+body.actievoorwaarden{
 
 	height:auto;
 	max-height: auto;
@@ -97,6 +57,8 @@ body.actievoorwaarden, body.goed {
 	
 
 }
+
+
 
 
 h5{
@@ -144,61 +106,88 @@ h5{
 	top:-30px;
 }
 
+.home{
+	button{
+		//width: 150px;
+		//margin-left: -75px;
+	}
+}
+
+.start{
+
+	button{
+		//width: 68px;
+		//margin-left: -34px;
+	}
+}
+
+	.goed{
+		.main{
+			border:0px !important ;
+		}
+		.text_container {
+			padding-left: 1%;
+			padding-right: 1%;
+		}
+	}
 
 
-@media only screen and (min-height : 700px)  and (max-height : 850px) { 
 
 
-		
+
+@media only screen and (min-width : 769px)  {
+
 	.content{
-		max-width: 438px ;
+
+		max-width: 468px;
+		max-height: 741px;
+
+		overflow: hidden;
+		
+	} 
+
+	 body{
+  		position: absolute;
+  		font-size: 20px;
+  	}
+
+  	button{
+  		font-size: 25px;
+  		margin-top: 15% !important;
+  	}
+
+  	.start{
+
+  		button{
+  			top:55%;
+  		}
+  	}
+
+  	.game_footer{
+  		top:685px !important;
+  	}
+
+	.goed{
+		.main{
+			border:10px solid $landal-green !important;
+			
+
+		}
+		.text_container {
+			padding-left: 1%;
+			padding-right: 1%;
+		}
 	}
 
-	button.white{
-		position:absolute;
-		top:620px!important;
-	}
+
+  	
 
 
-	.spel main.main{
-		height:104% ;
-	}
-
-	.start .game_footer{
-		top:673px !important;
-	}
 
 }
 	
 
-@media only screen and (min-height : 851px) and (max-height : 1039px) { 
-	
-	.content{
-		max-width: 558px;
-	}
-
-	button.white{
-		position:absolute;
-		top:820px!important;
-	}
-
-
-	.spel main.main{
-		height:104% !important;
-	}
-
-	.aanbiedingen_ontvangen .wpcf7-list-item-label{
-		top:0px;
-		padding-bottom: 2px;
-		left: -3px;
-	}
-
-	.start .game_footer{
-		top:875px !important;
-	}
-
-		
-}
+/* ----------- iPad mini ----------- */
 
 /* Portrait */
 @media only screen 
@@ -207,15 +196,141 @@ h5{
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
-  	button.white{
-  		top:850px !important;
-
+  	html, body, main{
+  		//max-height:1000px;
   	}
 
-  	.start .game_footer{
-		top:910px !important;
+  	body{
+  		position: absolute;
+  		font-size: 20px;
+  	}
+
+  	button{
+  		font-size: 25px;
+  		margin-top: 15% !important;
+  	}
+	
+	//browser facebook adjustmnents
+	.content{
+
+		max-width: 568px;
+	}
+
+	.goed{
+		.main{
+			border:0px ;
+		}
+		.text_container {
+			padding-left: 1%;
+			padding-right: 1%;
+		}
+	}
+
+
+	
+	.game_footer{
+		top:915px !important;
+	}
+
+	.spel .game_footer{
+		top:945px !important;
+	}
+ 
+	.wpcf7-submit{
+		
+		top:-150px !important ;
+	}
+
+}
+
+
+
+
+
+
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+ 	html, body, main{
+  		//max-height:1000px;
+  	}
+
+  	body{
+  		position: absolute;
+  	}
+	
+	//browser facebook adjustmnents
+	.content{
+		max-width: 568px;
+
+
+	}
+
+	button{
+		//top:850px !important;
+	}
+
+	.game_footer{
+		top:915px !important;
+	}
+
+	.spel .game_footer{
+		top:945px !important;
+	}
+ 
+	.wpcf7-submit{
+		
+		top:-150px !important ;
+	}
+
+	.goed{
+		.main{
+			border:0px ;
+		}
+		.text_container {
+			padding-left: 1%;
+			padding-right: 1%;
+		}
+	}
+
+
+
+}
+
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  	body.goed{
+  		font-size: 14px;
+  	}
+
+	.wpcf7-submit{
+		position: relative;
+		top: -30px;
+		left:3%;
 		
 	}
+
+
+
+
+
 }
+
+
+
+
 
 

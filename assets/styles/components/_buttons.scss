@@ -5,10 +5,10 @@ input[type=submit], button{
 	font-size: 16px;
 	border-radius: 4px;
 	background-color: $landal-green;
-	border: 1px solid $landal-green;
-	padding: 5px;
-	padding-left: 9px;
-	padding-right: 9px;
+	border: 2px solid $landal-green;
+	padding: 3%;
+	padding-left: 8%;
+	padding-right: 8%;
 	-moz-box-shadow: 2px 2px 3px #ccc;
 	box-shadow: 2px 2px 3px #ccc;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#ccc')";
@@ -20,21 +20,30 @@ input[type=submit] {
 	color: #fff;
 }
 
-
-
-button a{
-	color: #fff !important;
-	
+button{
+	//position:absolute !important;
+	//left: 50%;	
+	margin-left: auto;
+	margin-right: auto;
+	a{
+		color: #FFF!important ;
+	}
 }
 
+
+
+
 .wpcf7-submit{
-	position: absolute;
+	//position: absolute;
+	margin-top: 2%;
 }
 
 //button on the start page
 button.green {
 	z-index: 100;
-	position: absolute;
+	//position: absolute;
+
+	margin-top: 5%;
     //top: -230px;
     color: #FFF ;
     // margin-left: auto;
@@ -45,8 +54,11 @@ button.green {
 button.white {
 	z-index: 100;
 	position: absolute;
+	top:60%;
+	position: absolute;
+	left: 36%;
 	background-color: #FFF;
-	border-color: $landal-blue;
+	border: 2px solid $landal-green;
 	-moz-box-shadow: 0px 0px 0px #ccc;
 	box-shadow: 0px 0px 0px #ccc;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=0, Color='#ccc')";
