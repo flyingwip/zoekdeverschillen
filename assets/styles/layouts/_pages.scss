@@ -101,9 +101,14 @@ h5{
 	margin-top: -15px;
 }
 
-.start .text_container, .spel .main {
+.start .text_container {
 	position: relative;
 	top:-30px;
+}
+
+.spel .page-header{
+	margin: 0;
+	padding: 0;
 }
 
 .home{
@@ -142,7 +147,11 @@ h5{
 		position: relative;
 	}
 
+	main.main{
+		border:10px solid $landal-green;
+		height: 741px !important;
 
+	}
 
 	.content{
 
@@ -210,25 +219,36 @@ h5{
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
-  	html, body, main{
-  		//max-height:1000px;
-  	}
 
-  	body{
-  		position: absolute;
-  		font-size: 20px;
-  	}
+	main.main{
+		border:10px solid $landal-green !important;
+		height: 100%;
+		overflow: hidden;
+	}
 
+	//because main.main border does not show there border on content.row
+	.content.row{
+		border:10px solid $landal-green !important;
+	}
+
+
+	
+
+
+
+	body{
+		font-size: 20px;
+	}
   	button{
   		font-size: 25px;
   		margin-top: 15% !important;
   	}
-	
+
 	//browser facebook adjustmnents
 	.content{
-
 		max-width: 568px;
 	}
+
 
 	.goed{
 		.main{
@@ -241,14 +261,14 @@ h5{
 	}
 
 
-	
 	.game_footer{
-		top:915px !important;
+		top:900px !important;
 	}
 
-	.spel .game_footer{
-		top:945px !important;
-	}
+	.spel main.main{
+		
+		height: 100% !important;
+	 }
  
 	.wpcf7-submit{
 		

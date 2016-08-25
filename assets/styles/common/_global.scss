@@ -54,38 +54,14 @@ body{
 	display: none;
 }
 
-// .logo{
-// 	display: none;
-// 	position: absolute;
-// 	z-index: 20;
-// 	opacity: .7;
-// 	right:20px;
-// 	height: auto !important;
-// 	background-color: orange;
-
-// 	img{
-// 		max-width: 100% ;	
-// 	}
-	
-// }
 
 main.main{
 	text-align: center;
 	height: 100%;
-	border:10px solid $landal-green;
-	// border-right:10px solid $landal-green;
-	// border-bottom:10px solid $landal-green;
+	overflow: hidden;
+	//border:10px solid $landal-green;
 	background-color: #FFF;
 
-	@media only screen 
-	  and (min-device-width: 320px) 
-	  and (max-device-width: 568px)
-	  and (orientation: portrait) {
-	  	border-left:0px ;
-		border-right:0px;
-		border-bottom:0px;
-
-  	}
 
 
 }

@@ -73,11 +73,12 @@
 
 
         var fb = Hotspots.inIosFacebookApp();
+        var cor = 0;
         if(fb){
           cor = 110;
         } 
         //pos = document.documentElement.clientHeight  - ($('.game_footer').height()*2)   -cor ;
-        pos = document.documentElement.clientHeight  - $('.game_footer').height()+8 -cor;
+        pos = document.documentElement.clientHeight  - $('.game_footer').height()*2 -cor;
         $('.game_footer').css('top',pos + 'px');    
         $('.game_footer').css('display','block');    
         
@@ -96,11 +97,6 @@
           return false ;
       }
 
-    },
-    addGameFooterCorrectionClass: function() {
-
-
-
     }
   };
 
@@ -111,28 +107,7 @@
     // All pages
     'common': {
       init: function() {
-        // JavaScript to be fired on all pages
-
-        //alert( document.documentElement.clientHeight );
-        // pos = document.documentElement.clientHeight -   $('button').height()-130;
-        // //pos = 0;
-        // //$('button').css('top',pos + 'px');
-
-        // //what is width of button?
-        // var theDiv = $("button");
-        // var totalWidth = theDiv.outerWidth();
-        
-        // totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
-        // totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
-        // //console.log( totalWidth );
-
-        // var temp = Math.round(  (totalWidth/$(".text_container").width()*100)*0.5  );
-        
-       // $('button').css('left',50-temp+2 + '%');
-
-        
-
-      },
+     },
       finalize: function() {
         // // JavaScript to be fired on all pages, after page specific JS is fired
         
@@ -145,24 +120,7 @@
         
       },
       finalize: function() {
-        // JavaScript to be fired on the home page, after the init JS
-        //position the button
-        // pos = document.documentElement.clientHeight  -  $('button').height()  - 160;
 
-        // $('button').css('top',pos + 'px');
-
-        var theDiv = $("button");
-        var totalWidth = theDiv.outerWidth();
-        
-        // totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
-        // totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
-        // // //console.log( totalWidth );
-
-        // var temp = Math.round(  (totalWidth/ Math.round( $(".text_container").width() ) *100) *0.5  );
-        // console.log( theDiv.outerWidth() );
-        // console.log( Math.round( $(".content").width() ) );
-        // console.log( temp );
-        // $('button').css('left',50-temp + '%');
 
 
       }
@@ -177,10 +135,11 @@
       finalize: function() {
 
         var fb = Hotspots.inIosFacebookApp();
+        var cor = 0;
         if(fb){
-          cor = 110;
+          var cor = 110;
         } 
-        pos = document.documentElement.clientHeight  - ($('.game_footer').height()*2)   -cor ;
+        pos = document.documentElement.clientHeight  - ($('.game_footer').height()*2) - cor ;
 
         $('.game_footer').css('top',pos + 'px');    
         $('.game_footer').css('display','block');    
@@ -225,11 +184,11 @@
         pos = document.documentElement.clientHeight  - $('.wpcf7-submit').height()-45;
         //$('.eighth').css('top',pos + 'px');
 
-        var theDiv = $(".wpcf7-submit");
-        var totalWidth = theDiv.outerWidth();
-        totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
-        totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
-        var temp = Math.round(  (totalWidth/$(".text_container").width()*100)*0.5  );
+        // var theDiv = $(".wpcf7-submit");
+        // var totalWidth = theDiv.outerWidth();
+        // totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
+        // totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
+        // var temp = Math.round(  (totalWidth/$(".text_container").width()*100)*0.5  );
         
         //$('.eighth').css('left',51-temp + '%');
 
@@ -257,16 +216,13 @@
       init: function() {
         // JavaScript to be fired on the about us page
         Hotspots.initSlideShow();
-        //what is the height of the imagewrapper?
-        var h = $("#imagemapper1-wrapper").height() + $(".game_footer").height() +7;
-        $("main.main").height( h  +'px' );
+        //what is the height of the imagewrapper? WHY WHY WHY??????
+        //var h = $("#imagemapper1-wrapper").height() + $(".game_footer").height() +7;
+        //$("main.main").height( h  +'px' );
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-        //$('input[type=checkbox],input[type=radio]').prettyCheckboxes();
-
-
-
+      
       }
     },
     'actievoorwaarden': {
