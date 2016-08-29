@@ -94,7 +94,7 @@ h5{
 }
 
 .helaas .text_container:nth-child(2), .bedankt-a .text_container, .bedankt-b .text_container{
-	padding-top: 30%;
+	padding-top: 20%;
 }
 
 .home .text_container {
@@ -126,18 +126,21 @@ h5{
 	}
 }
 
-	.goed{
-		.main{
-			border:0px !important ;
-		}
-		.text_container {
-			padding-left: 1%;
-			padding-right: 1%;
-		}
+.goed{
+	.main{
+		border:0px !important ;
 	}
+	.text_container {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+}
 
-
-
+.actievoorwaarden{
+	main.main{
+		overflow: scroll;
+	}
+}
 
 
 @media only screen and (min-width : 769px)  {
@@ -190,6 +193,14 @@ h5{
   		top:685px !important;
   	}
 
+  	.spel .game_footer span{
+  		display: none;
+  	}
+
+  	.spel .game_footer:after{
+  		content:'Zie jij de vier verschillen? Klik het aan'
+	}
+
 	.goed{
 		.main{
 			border:10px solid $landal-green !important;
@@ -201,6 +212,18 @@ h5{
 			padding-right: 1%;
 		}
 	}
+
+	p.fourth {
+		margin-bottom: 10px;
+	}
+
+	p.seventh{
+		
+		//height: 70px;
+		margin-bottom: 4px;
+		padding-bottom: 0px;
+	}
+
 
 
   	
@@ -227,13 +250,9 @@ h5{
 	}
 
 	//because main.main border does not show there border on content.row
-	.content.row{
+	.goed .content.row{
 		border:10px solid $landal-green !important;
 	}
-
-
-	
-
 
 
 	body{
@@ -260,9 +279,9 @@ h5{
 		}
 	}
 
-
+	//overrule the footer position for iPad mini
 	.game_footer{
-		top:900px !important;
+		top:896px !important;
 	}
 
 	.spel main.main{
@@ -274,6 +293,7 @@ h5{
 		
 		top:-150px !important ;
 	}
+
 
 }
 
@@ -348,6 +368,7 @@ h5{
 
   	body.goed{
   		font-size: 14px;
+  		position: relative !important;
   	}
 
 	.wpcf7-submit{
@@ -357,12 +378,20 @@ h5{
 		
 	}
 
+	.game_footer{
+		font-size: 16px;
+	}
+
 
 
 
 
 }
 
+
+.green_relative{
+	margin-bottom: 50px;
+}
 
 
 

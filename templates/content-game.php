@@ -24,7 +24,7 @@ foreach ($slides as $key => $slide) {
 
 <?php the_content(); ?>
 <div class="game_footer">
-Zie jij de verschillen? Tik het aan
+<span>Zie jij de vier verschillen? Tik het aan</span>
 </div>
 
 <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>

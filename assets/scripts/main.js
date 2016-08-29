@@ -52,7 +52,7 @@
          $('.brainwash :first-child').fadeOut()
             .next('img').fadeIn()
             .end().appendTo('.brainwash');}, 
-          1400);
+          1000);
     } ,
     initGame: function() {
 
@@ -73,12 +73,12 @@
 
 
         var fb = Hotspots.inIosFacebookApp();
-        var cor = 0;
+        var corr = 0;
         if(fb){
-          cor = 110;
+          corr = 110;
         } 
         //pos = document.documentElement.clientHeight  - ($('.game_footer').height()*2)   -cor ;
-        pos = document.documentElement.clientHeight  - $('.game_footer').height()*2 -cor;
+        pos = document.documentElement.clientHeight  - $('.game_footer').height()*2-2 -corr;
         $('.game_footer').css('top',pos + 'px');    
         $('.game_footer').css('display','block');    
         
@@ -134,13 +134,14 @@
       },
       finalize: function() {
 
+        //facebook adjustments specially for InApp iphone 5 and 6
         var fb = Hotspots.inIosFacebookApp();
         var cor = 0;
         if(fb){
-          var cor = 110;
+          cor = 105;
         } 
         pos = document.documentElement.clientHeight  - ($('.game_footer').height()*2) - cor ;
-
+        
         $('.game_footer').css('top',pos + 'px');    
         $('.game_footer').css('display','block');    
 
@@ -153,6 +154,11 @@
         //display none to demo_mode:on
         $( "p:contains('[demo_mode: on]')" ).css( "display", "none" );
 
+        //add tabindex 
+        $(".sex").attr('tabindex', 1);
+        $(".land").attr('tabindex', 6);
+        $("p.seventh .wpcf7-list-item-label").attr('tabindex', 6);
+        
         //zet landen radio default op domein
         //what is de extensie?
         var extension=location.hostname.split(".");
@@ -164,9 +170,6 @@
           $('input[name="land"][value="België"]').prop('checked', true);
           $('input[name="land"][value="Nederland"]').prop('checked', false);
         }
-
-        //set the nieuwsbrief op checked
-        //$('input[name="aanbiedingen_ontvangen[]"]').prop('checked', true);
 
 
         //callback for redirecting naar juiste bedankt pagina
@@ -184,19 +187,11 @@
         pos = document.documentElement.clientHeight  - $('.wpcf7-submit').height()-45;
         //$('.eighth').css('top',pos + 'px');
 
-        // var theDiv = $(".wpcf7-submit");
-        // var totalWidth = theDiv.outerWidth();
-        // totalWidth += parseInt(theDiv.css("padding-left"), 10) + parseInt(theDiv.css("padding-right"), 10); //Total Padding Width
-        // totalWidth += parseInt(theDiv.css("borderLeftWidth"), 10) + parseInt(theDiv.css("borderRightWidth"), 10); //Total Border Width
-        // var temp = Math.round(  (totalWidth/$(".text_container").width()*100)*0.5  );
-        
-        //$('.eighth').css('left',51-temp + '%');
 
       
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-        //$('input[type=checkbox],input[type=radio]').prettyCheckboxes();
       }
 
     },
@@ -234,18 +229,10 @@
     },
     'bedankt_a': {
       finalize: function() {
-        pos = document.documentElement.clientHeight  - $('ul.social_media').height()-30;
-        $('ul.social_media').css('top',pos + 'px');    
-        //$('.game_footer').css('display','block');    
-        //console.log(pos);
       }
     },
     'bedankt_b': {
       finalize: function() {
-        pos = document.documentElement.clientHeight  - $('ul.social_media').height()-30;
-        $('ul.social_media').css('top',pos + 'px');    
-        //$('.game_footer').css('display','block');    
-        //console.log(pos);
       }
     }
   };

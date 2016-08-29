@@ -99,3 +99,13 @@ ul.social_media{
 .social_media h3 {
   
 }
+
+.cross{
+	position: absolute;
+	top:10px;
+	left:10px;
+	-ms-transform: scale(0.8, 0.8); /* IE 9 */
+    -webkit-transform: scale(0.8, 0.8); /* Safari */
+    transform: scale(0.8, 0.8);	
+
+}
