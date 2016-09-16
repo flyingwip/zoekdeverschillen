@@ -97,6 +97,18 @@
           return false ;
       }
 
+    },
+    meerOverLandal: function() {
+
+        $(".green_relative a").click( function(event){
+            event.preventDefault();
+            if(window.location.hostname=='www.landalmomentenvanger.nl'){
+              location.href= 'http://www.landal.nl/aanbiedingen/najaarsaanbod/najaarsinspiratie?utm_source=landalmomentenvanger&utm_medium=social&utm_campaign=lgp_nl&utm_content=landalmomentenvanger';
+            } else {
+              location.href= 'http://www.landal.be/aanbiedingen/najaarsaanbod/najaarsinspiratie?utm_source=landalmomentenvanger&utm_medium=social&utm_campaign=lgp_nl&utm_content=landalmomentenvanger';
+            }
+            
+        } );
     }
   };
 
@@ -107,6 +119,7 @@
     // All pages
     'common': {
       init: function() {
+        
      },
       finalize: function() {
         // // JavaScript to be fired on all pages, after page specific JS is fired
@@ -229,10 +242,15 @@
     },
     'bedankt_a': {
       finalize: function() {
+
+          Hotspots.meerOverLandal();   
+
       }
     },
     'bedankt_b': {
       finalize: function() {
+
+        Hotspots.meerOverLandal();
       }
     }
   };

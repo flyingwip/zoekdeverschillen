@@ -28,6 +28,18 @@
 	<noscript><img height="1" width="1" style="display:none"
 	src="https://www.facebook.com/tr?id=1001731559881698&ev=PageView&noscript=1"
 	/></noscript>
+
+	<style>
+	    @media all and (-ms-high-contrast:none)
+	     {
+
+		     p.fourth { margin-bottom:30px !important;  } /* IE10 */
+		     p.sixth { margin-left:5px !important;  } /* IE10 */
+		     *::-ms-backdrop, p.fourth { margin-bottom:30px !important; } /* IE11 */
+		     *::-ms-backdrop, p.sixth { margin-left:5px !important; } /* IE11 */
+	     }
+  </style>
+
 	<!-- End Facebook Pixel Code -->
   <?php wp_head(); ?>
 </head>

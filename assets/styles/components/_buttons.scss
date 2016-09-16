@@ -5,7 +5,7 @@ input[type=submit], button{
 	font-size: 16px;
 	border-radius: 4px;
 	background-color: $landal-green;
-	border: 2px solid $landal-green;
+	border: 0px solid $landal-green;
 	padding: 3%;
 	padding-left: 8%;
 	padding-right: 8%;
@@ -18,6 +18,7 @@ input[type=submit], button{
 
 input[type=submit] {
 	color: #fff;
+	font-size: 25px;
 }
 
 button{
@@ -58,11 +59,11 @@ button.white {
 	position: absolute;
 	left: 36%;
 	background-color: #FFF;
-	border: 2px solid $landal-green;
-	-moz-box-shadow: 0px 0px 0px #ccc;
-	box-shadow: 0px 0px 0px #ccc;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=0, Color='#ccc')";
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=0, Color='#ccc');
+	border: 0px solid $landal-green;
+	-moz-box-shadow: 2px 2px 3px #696969;
+	box-shadow: 3px 3px 3px #696969;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#696969')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#696969');
 
 	a{
 		color: $landal-blue !important;
