@@ -99,16 +99,27 @@
 
     },
     meerOverLandal: function() {
-
-        $(".green_relative a").click( function(event){
+        console.log('testje',window.location.hostname);
+        $(".green_relative").click( function(event){
             event.preventDefault();
-            if(window.location.hostname=='www.landalmomentenvanger.nl'){
-              location.href= 'http://www.landal.nl/aanbiedingen/najaarsaanbod/najaarsinspiratie?utm_source=landalmomentenvanger&utm_medium=social&utm_campaign=lgp_nl&utm_content=landalmomentenvanger';
+            if(window.location.hostname=='www.landalmomentenvanger.nl' || window.location.hostname=='landalmomentenvanger.nl'){
+              location.href= 'http://www.landal.nl/aanbiedingen/najaarsaanbod/najaarsinspiratie?utm_source=landalmomentenvanger&utm_medium=social&utm_campaign=lgp_nl&utm_content=landalmomentenvanger|||';
             } else {
-              location.href= 'http://www.landal.be/aanbiedingen/najaarsaanbod/najaarsinspiratie?utm_source=landalmomentenvanger&utm_medium=social&utm_campaign=lgp_nl&utm_content=landalmomentenvanger';
+              location.href= 'http://www.landal.be/aanbiedingen/najaarsaanbod/najaarsinspiratie?utm_source=landalmomentenvanger&utm_medium=social&utm_campaign=lgp_be&utm_content=landalmomentenvanger|||';
             }
             
         } );
+    },
+    shareOnFB: function() {
+      $("#fbshare").click( function(event){
+            event.preventDefault();
+            if(window.location.hostname=='www.landalmomentenvanger.nl' || window.location.hostname=='landalmomentenvanger.nl'){
+              location.href= 'https://www.facebook.com/sharer/sharer.php?u=https://facebook.com/Landalnl/posts/1286555834701633';
+            } else {
+              location.href= 'https://www.facebook.com/sharer/sharer.php?u=https://facebook.com/Landalbe/posts/1277593228919063';
+            }
+        });
+
     }
   };
 
@@ -189,9 +200,9 @@
         $(".wpcf7").on('wpcf7:mailsent', function(event){
           //is aanbiedingen ontvangen gecheckt?
           if($('input[name="aanbiedingen_ontvangen[]"]').is(":checked")){
-             location.href = 'bedankt-b';  
+             location.href = 'bedank';  
            } else {
-             location.href = 'bedankt-a';
+             location.href = 'bedankt';
           }
         });
 
@@ -240,16 +251,17 @@
           $("main.main").height( th  +'px' );   
       } 
     },
-    'bedankt_a': {
+    'bedankt': {
       finalize: function() {
 
+          Hotspots.shareOnFB();
           Hotspots.meerOverLandal();   
 
       }
     },
-    'bedankt_b': {
+    'bedank': {
       finalize: function() {
-
+        Hotspots.shareOnFB();
         Hotspots.meerOverLandal();
       }
     }
